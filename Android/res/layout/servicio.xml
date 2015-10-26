@@ -2,16 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentText">
+    android:orientation="vertical"
+    tools:context=".FragmentConsole" >
 
     <TextView
-        android:id="@+id/fragment_text"
+        android:id="@+id/servicio_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="41dp"
-        android:text="@string/hello_world"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="@string/hello_world" />
 
 </RelativeLayout>
