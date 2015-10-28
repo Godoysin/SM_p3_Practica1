@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FragmentConsole" >
+    tools:context=".FragmentServicio" >
 
     <TextView
         android:id="@+id/servicio_text"
@@ -11,6 +11,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+        android:text="@string/app_name" />
 
 </RelativeLayout>

@@ -33,14 +33,14 @@ public class FragmentConsole extends Fragment{
         mtext = (TextView)view.findViewById(R.id.console_text);
         
         
-      mbutton.setOnClickListener(new OnClickListener(){
-    	public void onClick(View view){
-            String mensaje = muser.getText().toString();
-            mensaje = mensaje + " " + mpass.getText().toString();
-            mtext.setText(mensaje);
+        mbutton.setOnClickListener(new OnClickListener(){
+        	public void onClick(View view){
+        		String mensaje = muser.getText().toString();
+        		mensaje = mensaje + " " + mpass.getText().toString();
+        		mtext.setText(mensaje);
             
-        }
-      });
+        	}
+        });
         return view;
 	}
 	
