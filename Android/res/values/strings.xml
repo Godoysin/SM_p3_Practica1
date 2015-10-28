@@ -8,5 +8,7 @@
     <string name="Mensaje">Mensaje</string>
     <string name="Usuario">Usuario</string>
     <string name="Clave">Clave</string>
+    <string name="Dominio">Dominio</string>
+    <string name="Puerto">Puerto</string>
 
 </resources>
