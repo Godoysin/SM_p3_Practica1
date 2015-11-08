@@ -16,11 +16,10 @@ import android.widget.TextView;
 public class FragmentConsole extends Fragment{
 	
 	private EditText muser;
-	//private EditText mpass;
-	//private EditText mdom;
-	//private EditText mport;
+	private EditText mpass;
+	private EditText mdom;
+	private EditText mport;
 	private Button mbutton;
-	//private TextView mtext;
 	
 	public FragmentConsole() {
         // Required empty public constructor
@@ -34,10 +33,9 @@ public class FragmentConsole extends Fragment{
 
 		muser = (EditText)view.findViewById(R.id.console_user);
 		mbutton = (Button) view.findViewById(R.id.console_button);
-        //mpass = (EditText)view.findViewById(R.id.console_pass);
-        //mdom = (EditText)view.findViewById(R.id.console_dominio);
-        //mport = (EditText)view.findViewById(R.id.console_puerto);
-        //mtext = (TextView)view.findViewById(R.id.console_text);
+        mpass = (EditText)view.findViewById(R.id.console_pass);
+        mdom = (EditText)view.findViewById(R.id.console_dominio);
+        mport = (EditText)view.findViewById(R.id.console_puerto);
         
         
         //mbutton.setOnClickListener(new OnClickListener(){
@@ -56,20 +54,23 @@ public class FragmentConsole extends Fragment{
 		mbutton.setOnClickListener(new OnClickListener(){
         	public void onClick(View view){
         		
-        		String mensaje = "Nombre: " + muser.getText().toString() + "\r\n";
+        		//Monto el mensaje con la información que le voy a pasar a la nueva actividad.
+        		String info = muser.getText().toString() + mpass.getText().toString() 
+        				+ mdom.getText().toString() + mport.getText().toString() + "\r\n";
         		
+        		//Con el intent la envio a la nueva actividad.
         		Intent intent = new Intent(getActivity(), Comunicaciones.class);
-        		intent.putExtra("datos", mensaje);
+        		intent.putExtra("datos", info);
         		startActivity(intent);
         		
-        		FragmentTransaction ft =fm.beginTransaction();
-        		
-        		FragmentServicio f = new FragmentServicio();
-				ft.replace(R.id.fragment_console, f);
-        		
-        		ft.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-    			ft.addToBackStack(null);
-    			ft.commit();
+        		//Este codigo es correcto y permite que cuando pulsas el botón
+        		//te cree un nuevo fragmento que reemplaza la que existente.
+        		//FragmentTransaction ft =fm.beginTransaction();
+        		//FragmentServicio f = new FragmentServicio();
+				//ft.replace(R.id.fragment_console, f);
+        		//ft.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+    			//ft.addToBackStack(null);
+    			//ft.commit();
         	}
         });
         return view;

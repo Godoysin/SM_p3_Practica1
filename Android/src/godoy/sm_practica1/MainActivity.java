@@ -19,8 +19,11 @@ public class MainActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		//Con esto se crea el fragmento de manera dinámica.
 		fm = getFragmentManager();
+		//Lo creo en fragment_console
 		Fragment fragment = fm.findFragmentById(R.id.fragment_console);
+		//Lo creo solo si no hay otro fragmento en fragment_console
 		if (fragment == null) {
 			FragmentTransaction ft = fm.beginTransaction();
 			FragmentConsole console = new FragmentConsole();

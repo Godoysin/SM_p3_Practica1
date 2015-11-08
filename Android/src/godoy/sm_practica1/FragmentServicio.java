@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 public class FragmentServicio extends Fragment{
 	
-	//private TextView mtext;
-	
 	public FragmentServicio(){
         //Definir
     }
